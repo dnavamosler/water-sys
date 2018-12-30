@@ -1,0 +1,38 @@
+{
+    "optionsUser":[
+        {
+            "id":1,
+            "description": "registrar abono"
+        },
+        {
+            "id":2,
+            "description": "registrar cambio"
+        },
+        {
+            "id":3,
+            "description": "registrar remito"
+        },
+        {
+            "id":4,
+            "description": "registrar retiro"
+        }
+    ],
+    "optionsAdmin":[
+        {
+            "id":1,
+            "description": "Reportes"
+        },
+        {
+            "id":2,
+            "description": "Vendedores"
+        },
+        {
+            "id":3,
+            "description": "Clientes"
+        },
+        {
+            "id":4,
+            "description": "Ajustes de Administrador"
+        }
+    ]
+}

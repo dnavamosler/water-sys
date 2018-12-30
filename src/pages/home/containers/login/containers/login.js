@@ -11,9 +11,13 @@ class Login extends Component{
             <LoginLayout>
                 <HeaderLogin />
                 <form>
-                    <Input />
-                    <Input />
-                    <Button />
+                    <Input  
+                        placeholder='username' />
+                    <Input
+                        placeholder='password' />
+                    <Button 
+                        contenido='Ingresar'
+                    />
                 </form>
             </LoginLayout>
         )

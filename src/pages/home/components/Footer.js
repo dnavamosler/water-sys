@@ -1,8 +1,9 @@
 import React from 'react'
+import './footer.css'
 
 const Footer = (props) => {
     return(
-        <div>
+        <div className='footer'>
             <h2>
                 INGRESAR COMO ADMINISTRADOR
             </h2>

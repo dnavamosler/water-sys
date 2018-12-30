@@ -1,8 +1,8 @@
 import React from 'react'
-
+import './login.css'
 const LoginLayout = (props) => {
     return(
-        <div>
+        <div className='login'>
             {props.children}
         </div>
     )

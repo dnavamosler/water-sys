@@ -1,10 +1,12 @@
 import React from 'react'
+import IconsApi from '../../../../../icons/api-icons.json'
 
 const Input = (props) => {
     return(
-        <input>
-            
-        </input>
+        <div className='input'>
+            <input placeholder={props.placeholder}>
+            </input>
+        </div>
     )
 }
 
