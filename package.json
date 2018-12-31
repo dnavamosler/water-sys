@@ -2,11 +2,11 @@
   "name": "water-sys",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://dnavamosler.github.io/water-sys",
   "dependencies": {
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
-    "react-scripts": "2.1.2",
-    "homepage": "https://dnavamosler.github.io/water-sys"
+    "react-scripts": "2.1.2"
   },
   "scripts": {
     "start": "react-scripts start",
