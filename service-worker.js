@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/water-sys/precache-manifest.c1275314fd753021d1cdcff6b8ff6c5e.js"
+  "/water-sys/precache-manifest.1c14ca514684b62ec88d550de3c15aa4.js"
 );
 
 workbox.clientsClaim();
