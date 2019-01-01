@@ -9,7 +9,9 @@ import Button from '../Buttons/button'
 import MenuApi from '../../api/menu.json'
 
 const Menu = (props) =>{
+    // la linea de abajo esta harcodeada, falta la logica para hacer que reaccione al tipo de usuario.
     const menu = MenuApi.Menu[0]
+
     
  
 
@@ -27,7 +29,6 @@ const Menu = (props) =>{
             <li>
                 <Link to='/'>
                 <Button clase ='exit' contenido='salir' />
-                
                 </Link>               
             </li>
         </ul>

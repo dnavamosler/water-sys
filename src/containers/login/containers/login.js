@@ -5,11 +5,7 @@ import Input from '../components/input'
 import Button from '../../../components/Buttons/button'
 import { Link } from 'react-router-dom'
 
-class Login extends Component{
-    state = {
-        user: this.props.currentUser
-    }
-    
+class Login extends Component{    
 
     render(){
         return(
