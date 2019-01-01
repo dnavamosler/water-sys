@@ -1,0 +1,62 @@
+.login {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 0;
+  color: #434A54;
+}
+
+.login form {
+  padding: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+}
+
+.login form .input {
+  width: 250px;
+  margin: 5px 0;
+  border-radius: 20px;
+  background-color: white;
+  padding: 5px 15px;
+  border: 2px solid #434A54;
+}
+
+.login form .input input {
+  font-size: 1.3em;
+  background: none;
+  border: none;
+  outline: none;
+  color: #434A54;
+}
+
+.login form .input input::-webkit-input-placeholder {
+  color: #CCD0D9;
+}
+
+.login form .input input:-ms-input-placeholder {
+  color: #CCD0D9;
+}
+
+.login form .input input::-ms-input-placeholder {
+  color: #CCD0D9;
+}
+
+.login form .input input::placeholder {
+  color: #CCD0D9;
+}
+/*# sourceMappingURL=login.css.map */

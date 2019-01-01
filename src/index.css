@@ -13,12 +13,6 @@ code {
     monospace;
 }
 
-#app{
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-}
-
 h1,h2,h3,h4,h5,h6{
   margin: 0;
 }
@@ -31,4 +25,13 @@ h1,h2,h3,h4,h5,h6{
 *::after,
 *::before,{
   box-sizing: inherit;
+}
+
+.app{
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+a{
+  width: inherit;
 }

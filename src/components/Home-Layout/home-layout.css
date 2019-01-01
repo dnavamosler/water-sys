@@ -1,0 +1,21 @@
+.Home {
+  background: -webkit-gradient(linear, left top, left bottom, from(#50C1E9), to(#3BAEDA));
+  background: linear-gradient(#50C1E9, #3BAEDA);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/*# sourceMappingURL=home-layout.css.map */

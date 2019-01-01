@@ -1,0 +1,32 @@
+{
+    "Menu":[
+        {
+            "id":1,
+            "description":"user",
+            "options":[
+                {"text" : "registrar abono",
+                    "id" : 1},
+                {"text" : "registrar cambio",
+                    "id" : 2},
+                {"text" : "registrar remito",
+                    "id" : 3},
+                {"text" : "registrar retiro",
+                    "id" : 4}
+            ]
+        },
+        {
+            "id":2,
+            "description":"admin",
+            "options":[
+                {"text" : "Reportes",
+                    "id" : 1},
+                {"text" : "Vendedores",
+                    "id" : 2},
+                {"text" : "Clientes",
+                    "id" : 3},
+                {"text" : "Ajustes de administrador",
+                    "id" : 4}
+            ]
+        }
+    ]
+}
