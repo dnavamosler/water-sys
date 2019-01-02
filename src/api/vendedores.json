@@ -1,0 +1,64 @@
+{
+    "vendedores": [
+        {
+            "id": 1,
+            "nombre": "Luis",
+            "apellido": "perez",
+            "telefono": "12345678"
+        },
+        {
+            "id": 2,
+            "nombre": "daniel",
+            "apellido": "nava",
+            "telefono": "12345678"
+        },
+        {
+            "id": 3,
+            "nombre": "diego",
+            "apellido": "bento",
+            "telefono": "12345678"
+        },
+        {
+            "id": 4,
+            "nombre": "juana",
+            "apellido": "cubana",
+            "telefono": "12345678"
+        },
+        {
+            "id": 5,
+            "nombre": "sergio",
+            "apellido": "arquimedes",
+            "telefono": "12345678"
+        },
+        {
+            "id": 6,
+            "nombre": "oscar",
+            "apellido": "fernandez",
+            "telefono": "12345678"
+        },
+        {
+            "id": 7,
+            "nombre": "rodrigo",
+            "apellido": "faro",
+            "telefono": "12345678"
+        },
+        {
+            "id": 8,
+            "nombre": "ana",
+            "apellido": "paula",
+            "telefono": "12345678"
+        },
+        {
+            "id": 9,
+            "nombre": "jesus",
+            "apellido": "hernandez",
+            "telefono": "12345678"
+        },
+        {
+            "id": 10,
+            "nombre": "carlos",
+            "apellido": "verdozo",
+            "telefono": "12345678"
+        }
+    ]
+}

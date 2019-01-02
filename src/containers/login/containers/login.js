@@ -18,6 +18,7 @@ class Login extends Component{
                         placeholder='password' type='password' />
                     <Link to="/home" >
                     <Button 
+                        clase='regular-button'
                         contenido='ingresar'
                        
                     />

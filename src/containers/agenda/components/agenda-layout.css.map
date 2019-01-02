@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,IAAI,CAAA;EACA,UAAU,EAAE,OAAO;CACtB",
+    "sources": [
+        "agenda-layout.scss"
+    ],
+    "names": [],
+    "file": "agenda-layout.css"
+}

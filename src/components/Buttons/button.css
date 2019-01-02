@@ -1,4 +1,4 @@
-button {
+.regular-button {
   margin-top: 10px;
   border-radius: 20px;
   outline: none;
@@ -18,13 +18,13 @@ button {
   width: 100%;
 }
 
-button:hover {
+.regular-button:hover {
   background: #434A54;
   -webkit-box-shadow: inset -3px -3px 0px #2d3138;
           box-shadow: inset -3px -3px 0px #2d3138;
 }
 
-button:active {
+.regular-button:active {
   -webkit-transform: scale(0.95);
           transform: scale(0.95);
 }

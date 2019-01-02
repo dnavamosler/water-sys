@@ -21,14 +21,14 @@ const Menu = (props) =>{
             {menu.options.map( (item) =>{
                 return (
                     <li key={item.id}> 
-                        <Button contenido={item.text} />   
+                        <Button clase='regular-button' contenido={item.text} />   
                      </li>
                 )
             })}
 
             <li>
                 <Link to='/'>
-                <Button clase ='exit' contenido='salir' />
+                <Button clase ='regular-button exit' contenido='salir' />
                 </Link>               
             </li>
         </ul>
