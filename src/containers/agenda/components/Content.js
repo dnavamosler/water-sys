@@ -17,7 +17,7 @@ const detail = () => {
                     name={item.nombre} 
                     apellido={item.apellido}
                     telefono={item.telefono}
-                    key={item.key}/>
+                    key={item.id}/>
                 })}
                
             </ul>

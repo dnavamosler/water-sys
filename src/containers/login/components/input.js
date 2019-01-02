@@ -1,19 +1,33 @@
-import React from 'react'
+import React,{ Component } from 'react'
 
 
-const Input = (props) => {
+class Input extends Component{
+    constructor(props) {
+        super(props)
+        this.state = {
+        value: '',
+        placeholder: this.props.placeholder
+        }}
 
-    const tipo = props.type
+    handleChange = (e) => {
+        this.setState({value: e.target.value})
+        console.log(this.state.value)
+      }
 
-    return(
-        <div className='input'>
-            <input 
-            placeholder={props.placeholder}
-            type={tipo}
-            >
-            </input>
-        </div>
-    )
+     render(){
+         return(            
+            <div className='input'>
+                <input id='search'
+                placeholder={this.state.placeholder}
+                type={this.props.tipo} 
+                value={this.state.value} 
+                onChange={this.handleChange}
+                />                    
+                    
+            </div>
+            
+         )
+     }
 }
 
 export default Input
