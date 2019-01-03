@@ -11,6 +11,7 @@ import Home from './containers/home/home'
 import HomeAdmin from './components/home-admin/homeAdmin'
 import Panel from './components/Panel/Panel'
 import Agenda from './containers/agenda/agenda'
+import AgendaDetail from './containers/agenda-detail/agenda-detail'
 
 const AppRoutes = () =>
     <App>
@@ -19,6 +20,7 @@ const AppRoutes = () =>
             <Route exact path="/admin" component={ HomeAdmin } />
             <Route exact path="/home" component={ Panel } />
             <Route exact path="/agenda" component={ Agenda} />
+            <Route exact path="/agenda-detail" component={ AgendaDetail} />
             <Route component={ Home } />
             
         </Switch>

@@ -5,21 +5,33 @@ import Card from './Card'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronLeft, faSearch } from '@fortawesome/free-solid-svg-icons'
 
+import Search from './search'
+
 const HeaderAgenda = (props) =>{
     
     const detail = () => {
-        let val = true
-        if(val) 
+        let position = props.position
+
+        switch(position) {
+            case 'home':
             return(
-                <form>
+            <form onSubmit={props.handleSubmit}>
                 <button>
                     <FontAwesomeIcon icon={faSearch} />
                 </button>
-                <input placeholder='Buscar...'></input>
+                
+                <Search placeholder='buscar...'  handleChange={props.handleChange}/>
+                
             </form>
             )
-        else
-            return(<Card type='person-card'/>)
+            
+            case 'detail' :
+
+            return(<Card type='person-card' data={props.data}/>)
+            
+            default:
+            break
+        }
     }
     
 return(

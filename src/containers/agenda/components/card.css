@@ -1,4 +1,8 @@
-.card {
+a {
+  text-decoration: none;
+}
+
+a .card {
   border-radius: 10px;
   -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.8);
           box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.8);
@@ -20,17 +24,17 @@
   transition: .2s;
 }
 
-.card:hover {
+a .card:hover {
   background: #37BD9C;
   color: white;
 }
 
-.card svg {
+a .card svg {
   margin-right: auto;
   font-size: 40px;
 }
 
-.card h3 {
+a .card h3 {
   margin-right: auto;
   font-size: 1.6em;
 }
