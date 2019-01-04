@@ -4,61 +4,88 @@
             "id": 1,
             "nombre": "Luis",
             "apellido": "perez",
-            "telefono": "12345678"
+            "informacion": [
+                {"Telefono": "0123456789"},
+                {"Cargo" : "brujilda"}
+            ]
         },
         {
             "id": 2,
             "nombre": "daniel",
             "apellido": "nava",
-            "telefono": "12345678"
+            "informacion": [
+                {"Telefono": "0123456789"},
+                {"pais": "chile"},
+                {"idioma": "castellano"},
+                {"profesion": "desarrollador"},
+                {"correo": "dnavamosler@gmail.com"}
+                
+            ]
         },
         {
             "id": 3,
             "nombre": "diego",
             "apellido": "bento",
-            "telefono": "12345678"
+            "informacion": [
+                {"Telefono": "0123456789"}
+            ]
         },
         {
             "id": 4,
             "nombre": "juana",
             "apellido": "cubana",
-            "telefono": "12345678"
+            "informacion": [
+                {"Telefono": "012345131s1289",
+                "cargo" : "senda bruja"}
+            ]
         },
         {
             "id": 5,
             "nombre": "sergio",
             "apellido": "arquimedes",
-            "telefono": "12345678"
+            "informacion": [
+                {"telefono": "0123456789"}
+            ]
         },
         {
             "id": 6,
             "nombre": "oscar",
             "apellido": "fernandez",
-            "telefono": "12345678"
+            "informacion": [
+                {"telefono": "0123456789"}
+            ]
         },
         {
             "id": 7,
             "nombre": "rodrigo",
             "apellido": "faro",
-            "telefono": "12345678"
+            "informacion": [
+                {"telefono": "0123456789"}
+            ]
         },
         {
             "id": 8,
             "nombre": "ana",
             "apellido": "paula",
-            "telefono": "12345678"
+            "informacion": [
+                {"telefono": "0123456789"}
+            ]
         },
         {
             "id": 9,
             "nombre": "jesus",
             "apellido": "hernandez",
-            "telefono": "12345678"
+            "informacion": [
+                {"telefono": "0123456789"}
+            ]
         },
         {
             "id": 10,
             "nombre": "carlos",
             "apellido": "verdozo",
-            "telefono": "12345678"
+            "informacion": [
+                {"telefono": "0123456789"}
+            ]
         }
     ]
 }

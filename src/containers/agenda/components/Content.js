@@ -6,22 +6,10 @@ import './content.css'
 
 const Content = (props) => {
 
-    const mostrarInformacion = (datos) => {
-            
-       datos.vendedores.map((item) => {
-            return <Card
-                type='person-card'
-                data={item}
-                key={item.id} 
-    
-                />
-        })
-    
-    }
 
     const detail = () => {    
 
-        
+    
         switch (props.position) {
             case 'home':
                 return (
@@ -34,11 +22,12 @@ const Content = (props) => {
                             })
                                 .map((item) => {
                                     return <Card
-                                        handleDetailClick={props.handleDetailClick}
+                                        handleCardClick={() =>{
+                                            props.handleCardClick(item.id)
+                                        }}
                                         type='person-card'                                        
                                         data={item}
                                         key={item.id}
-                                        detail={props.receptData}
                                          />
                                         
                                 })
@@ -52,7 +41,41 @@ const Content = (props) => {
             case 'detail':
                 return (
                     <ul>
-                        {mostrarInformacion(props.data)}
+                        {  
+                           props.data.informacion.map((Item) => { 
+                                for(let Key in Item){
+                                    
+                                  return(  
+                                    
+
+                                    props.editable
+
+                                        ? (<Card 
+                                            type='detail'
+                                            tittle={Key}
+                                            contenido={Item[Key]}
+                                            handleEdit={props.handleEdit}
+                                            editable={true}
+                                            keyEdit={props.keyEdit}
+                                            />
+                                            )
+
+                                        : (<Card 
+                                            type='detail'
+                                            tittle={Key}
+                                            contenido={Item[Key]}
+                                            handleEdit={props.handleEdit}
+                                            editable={false}
+                                            keyEdit={props.keyEdit}
+    
+                                            />)
+                                  )
+                                        
+                                    
+                                }
+                            })
+                        }
+                        
                     </ul>
                 )
 

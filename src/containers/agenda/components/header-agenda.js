@@ -15,19 +15,24 @@ const HeaderAgenda = (props) =>{
         switch(position) {
             case 'home':
             return(
-            <form onSubmit={props.handleSubmit}>
-                <button>
-                    <FontAwesomeIcon icon={faSearch} />
-                </button>
-                
-                <Search placeholder='buscar...'  handleChange={props.handleChange}/>
-                
-            </form>
+                <form onSubmit={props.handleSubmit}>
+                    <button >
+                        <FontAwesomeIcon icon={faSearch} />
+                    </button>
+                    
+                    <Search placeholder='buscar...'  handleChange={props.handleChange}/>
+                    
+                </form>
             )
             
             case 'detail' :
 
-            return(<Card type='person-card' data={props.data}/>)
+            return(
+                 <Card 
+                 type='person-card' 
+                 data={props.data} 
+                 /> 
+                )
             
             default:
             break
@@ -35,15 +40,14 @@ const HeaderAgenda = (props) =>{
     }
     
 return(
-    <header className='encabezado'>
+    <header className='encabezado' >
        <div className='encabezado-categories'>
-        <button className='back-button'>
+        <button className='back-button' onClick={props.handleBack}>
                 <FontAwesomeIcon icon={faChevronLeft} />
             </button>
-            <h2>VENDEDORES</h2>
+            <h2 >VENDEDORES</h2>
        </div>
         {detail()}
-        
     </header>
 )}
 
