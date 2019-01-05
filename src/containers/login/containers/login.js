@@ -28,7 +28,7 @@ class Login extends Component{
                     />
                    
                 </form>
-                <Footer user={this.props.currentUser} />
+                <Footer user={this.props.currentUser} handleChangeUser={this.props.handleChangeUser} />
             </LoginLayout>
         )
     }

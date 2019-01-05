@@ -3,26 +3,27 @@ import { Link } from 'react-router-dom';
 
 //components
 import Button from '../Buttons/button'
-
+import './menu.css'
 // Api Menu
 
 import MenuApi from '../../api/menu.json'
 
 const Menu = (props) =>{
     // la linea de abajo esta harcodeada, falta la logica para hacer que reaccione al tipo de usuario.
-    const menu = MenuApi.Menu[1]  //-> 1 indica admin , 0 indica user
+
+    const menuOpt = MenuApi.Menu[props.menu].options
 
     
  
 
     return(
         
-        <ul>
-            {menu.options.map( (item) =>{
+        <ul className='menu'>
+            {menuOpt.map( (item) =>{
                 return (
                     <li key={item.id}> 
                         <Button 
-                            clase='regular-button' 
+                            className='regular-button' 
                             contenido={item.text} 
                         />   
                      </li>
@@ -31,7 +32,7 @@ const Menu = (props) =>{
 
             <li>
                 <Link to='/'>
-                <Button clase ='regular-button exit' contenido='salir' />
+                <Button className='regular-button exit' contenido='Salir' onClick={props.handleExit} />
                 </Link>               
             </li>
         </ul>

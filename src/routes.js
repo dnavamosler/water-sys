@@ -8,7 +8,6 @@ import App from './components/App'
 
 // Container
 import Home from './containers/home/home'
-import Panel from './components/Panel/Panel'
 import Agenda from './containers/agenda/agenda'
 
 
@@ -16,7 +15,6 @@ const AppRoutes = () =>
     <App>
         <Switch>
             <Route exact path="/" component={ Home } />
-            <Route exact path="/home" component={ Panel } />
             <Route exact path="/agenda" component={ Agenda} />
             <Route component={ Home } />
             

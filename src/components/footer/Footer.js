@@ -11,12 +11,12 @@ const Footer = (props) => {
         if (usuario == 'user')
             return (<h2>  ingresar como usuario </h2>)
         else
-            return (<h2>  ingresar como {props.user} </h2>)
+            return (<h2>  ingresar como administrador </h2>)
     }
 
 
     return (
-        <div className='footer__login' >
+        <div className='footer__login' onClick={props.handleChangeUser} >
 
             {typeUser(props.user)}
 

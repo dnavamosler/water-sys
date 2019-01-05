@@ -18,4 +18,8 @@
       -ms-flex-align: center;
           align-items: center;
 }
+
+.Home .container {
+  width: 80%;
+}
 /*# sourceMappingURL=home-layout.css.map */
