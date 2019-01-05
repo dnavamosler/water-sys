@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
 
 //components
 import Button from '../Buttons/button'
@@ -22,18 +21,19 @@ const Menu = (props) =>{
             {menuOpt.map( (item) =>{
                 return (
                     <li key={item.id}> 
-                        <Button 
-                            className='regular-button' 
-                            contenido={item.text} 
-                        />   
+                        
+                            <Button 
+                                className='regular-button' 
+                                contenido={item.text} 
+                            />   
+                
                      </li>
                         )
             })}
 
             <li>
-                <Link to='/'>
                 <Button className='regular-button exit' contenido='Salir' onClick={props.handleExit} />
-                </Link>               
+                          
             </li>
         </ul>
 

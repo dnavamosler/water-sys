@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import AgendaLayout from './components/agenta-layout'
 import Content from './components/Content'
 import HeaderAgenda from './components/header-agenda'
-import Vendedores from '../../api/vendedores.json'
+import BD from '../../api/BD.json'
 
 class Agenda extends Component {
 
@@ -12,7 +12,7 @@ class Agenda extends Component {
         this.setState({editable: false})
         this.state = {
             value: '',
-            data: Vendedores,
+            data: BD,
             vista: true,
             keyDetail: null,
             editable: false,

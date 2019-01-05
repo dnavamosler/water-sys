@@ -1,22 +1,14 @@
 // Dependencias
 import React from 'react';
 import { render } from 'react-dom';
-import {BrowserRouter as Router} from 'react-router-dom'
+import Home from './containers/home/home'
 import * as serviceWorker from './serviceWorker';
-
-
-// routes
-
-import AppRoutes from './routes'
 
 // Assents
 
 import './index.css';
 
-render(
-    <Router>
-        <AppRoutes />
-    </Router>,
+render(<Home />,
     document.getElementById('root')
 )
 

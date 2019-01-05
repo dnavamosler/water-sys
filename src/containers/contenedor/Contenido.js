@@ -4,9 +4,9 @@ import React, { Component } from 'react'
 
 import MenuApi from '../../api/menu.json'
 
-
 import Login from '../login/containers/login'
 import Menu from '../../components/Menu/Menu'
+import Agenda from '../agenda/agenda'
 
 class Contenido extends Component {
     constructor(props) {
@@ -80,6 +80,9 @@ class Contenido extends Component {
 
                 case 'panelAdmin':
                 return(<Menu menu='admin' handleExit={this.handleExit}/>)
+
+                case 'agenda':
+                return(<Agenda />)
             }
         }
 
