@@ -16,7 +16,7 @@ const Footer = (props) => {
 
 
     return (
-        <div >
+        <div className='footer__login' >
 
             {typeUser(props.user)}
 
