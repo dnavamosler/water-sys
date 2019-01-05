@@ -31,8 +31,9 @@ const Card = (props) => {
                         <div className='separador' />
 
                         <input
-                            value={props.contenido}
-                            className='edit' />
+                            defaultValue={props.contenido}
+                            className='edit' 
+                            />
                     </div>)
 
                     : (<div className='card card-detail'>
@@ -47,7 +48,9 @@ const Card = (props) => {
                         <div className='separador' />
                         <input
                             disabled
-                            value={props.contenido} />
+                            defaultValue={props.contenido}
+                            onChange={props.handleChange}
+                             />
                     </div>)  
                  )
 

@@ -28,7 +28,7 @@ const Content = (props) => {
                                         type='person-card'                                        
                                         data={item}
                                         key={item.id}
-                                         />
+                                        />
                                         
                                 })
 
@@ -67,7 +67,8 @@ const Content = (props) => {
                                             handleEdit={props.handleEdit}
                                             editable={false}
                                             keyEdit={props.keyEdit}
-    
+                                            handleChange={props.handleChange}
+                                            
                                             />)
                                   )
                                         

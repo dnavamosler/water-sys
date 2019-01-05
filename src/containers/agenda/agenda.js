@@ -39,6 +39,7 @@ class Agenda extends Component {
 
     handleBack = (e) => {
         this.setState({ vista: true })
+        this.setState({editable: false})
     }
 
     handleEdit = (key) => {
@@ -93,6 +94,8 @@ class Agenda extends Component {
                         handleEdit={this.handleEdit}
                         editable={this.state.editable}
                         keyEdit={this.state.keyEdit}
+                        handleChange={this.handleChange}
+                        
                     />
 
                 </AgendaLayout>
