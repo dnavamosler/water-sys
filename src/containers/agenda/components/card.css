@@ -110,10 +110,16 @@
   color: #434A54;
   font-weight: bold;
   text-align: center;
-  width: 100%;
+  width: 60%;
 }
 
 .card-detail input.edit {
   border: 1px solid grey;
+}
+
+@media only screen and (min-width: 768px) {
+  .card-detail input {
+    width: 40%;
+  }
 }
 /*# sourceMappingURL=card.css.map */

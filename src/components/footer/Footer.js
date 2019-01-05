@@ -1,38 +1,24 @@
 import React from 'react'
 import './footer.css'
-import { Link } from 'react-router-dom';
+
 
 const Footer = (props) => {
+    
 
-    const user = props.user
-
+    //logica para conseguir si el usuario que ingresa es administrador o usuario comun
     const typeUser = (usuario) =>{
 
-        switch(usuario){
-            case 'user':
-                return(
-                    <Link className='footer' to='/'>
-                       <h2>  ingresar como usuario </h2>
-                    </Link>  
-                )
+       ( usuario == 'user')
 
-            case 'admin':
-                return(
-                    <Link className='footer' to='/admin'>
-                      <h2>  ingresar como {user} </h2>
-                    </Link>  
-                )
-
-            default:
-            break;
-        }
+        ? ( <h2>  ingresar como usuario </h2>)
+        : (<h2>  ingresar como {props.user} </h2>)
     }
     
     
     return(
         <div >
             
-                {typeUser(user)}                
+                {typeUser(props.user)}                
             
         </div>
     )

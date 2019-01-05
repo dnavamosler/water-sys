@@ -10,7 +10,7 @@ import MenuApi from '../../api/menu.json'
 
 const Menu = (props) =>{
     // la linea de abajo esta harcodeada, falta la logica para hacer que reaccione al tipo de usuario.
-    const menu = MenuApi.Menu[0]
+    const menu = MenuApi.Menu[1]  //-> 1 indica admin , 0 indica user
 
     
  
@@ -21,9 +21,12 @@ const Menu = (props) =>{
             {menu.options.map( (item) =>{
                 return (
                     <li key={item.id}> 
-                        <Button clase='regular-button' contenido={item.text} />   
+                        <Button 
+                            clase='regular-button' 
+                            contenido={item.text} 
+                        />   
                      </li>
-                )
+                        )
             })}
 
             <li>

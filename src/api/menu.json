@@ -24,8 +24,12 @@
                     "id" : 2},
                 {"text" : "Clientes",
                     "id" : 3},
+                    
+                {"text" : "Planes",
+                    "id" : 4},
+
                 {"text" : "Ajustes de administrador",
-                    "id" : 4}
+                    "id" : 5}
             ]
         }
     ]

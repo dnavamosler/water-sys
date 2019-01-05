@@ -85,7 +85,12 @@
                 color: #434A54;
                 font-weight: bold;
                 text-align: center;
-                width: 100%;
+                width: 60%;
+                
+                @media only screen and (min-width: 768px){
+                    width:40%
+                }
+                
             }
 
         }

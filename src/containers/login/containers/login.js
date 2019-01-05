@@ -3,9 +3,13 @@ import LoginLayout from '../components/login-layout'
 import HeaderLogin from '../components/Header-login'
 import Input from '../components/input'
 import Button from '../../../components/Buttons/button'
-import { Link } from 'react-router-dom'
+import Footer from '../../../components/footer/Footer'
+
 
 class Login extends Component{    
+    constructor(props){
+        super(props)
+    }
 
     render(){
         return(
@@ -16,14 +20,15 @@ class Login extends Component{
                         placeholder='username' />
                     <Input
                         placeholder='password' type='password' />
-                    <Link to="/home" >
+                    
                     <Button 
-                        clase='regular-button'
+                        className='regular-button'
                         contenido='ingresar'
-                       
+                        onClick={this.props.handleLogin}
                     />
-                    </Link>
+                   
                 </form>
+                <Footer user={this.props.currentUser} />
             </LoginLayout>
         )
     }
