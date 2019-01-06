@@ -9,30 +9,42 @@ class Home extends Component {
         super(props)
 
         this.state = {
-            home: true
+            home: true,
+            showPage : 'home',
         }
     }
 
+    handleContentPage = (pagina) => {
+        this.setState({showPage : pagina})
+    }
+
+    handleExitHome = () => {
+        this.setState({home : false})
+    }
+
     handleBackHome = () => {
-        this.setState({home: !this.state.home})
+        this.setState({ home: true })
     }
 
     render() {
 
         const home = () => {
-           if( this.state.home)
-           return (
-                    <HomeLayout>
+            if (this.state.home)
+                return (
+                    <HomeLayout className='Home'>
                         <Logo />
-                        <Contenido handleBackHome={this.handleBackHome} />
-                     </HomeLayout>
-                        
-                    
-            )
+                        <Contenido handleExitHome={this.handleExitHome} page={this.state.showPage} handleContentPage={this.handleContentPage} handleBackHome={this.handleBackHome} />
+                    </HomeLayout>
 
-             else return(
-                    <Contenido/>                 
-                  )
+
+                )
+
+            else
+                return (
+                    <HomeLayout className='in'>
+                         <Contenido handleExitHome={this.handleExitHome} page={this.state.showPage} handleContentPage={this.handleContentPage}/>
+                    </HomeLayout>
+                )
         }
 
         return (

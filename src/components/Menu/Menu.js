@@ -23,6 +23,7 @@ const Menu = (props) =>{
                     <li key={item.id}> 
                         
                             <Button 
+                                onClick={props.handleShowAgenda}             
                                 className='regular-button' 
                                 contenido={item.text} 
                             />   

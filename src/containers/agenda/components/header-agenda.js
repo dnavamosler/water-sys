@@ -16,8 +16,8 @@ const HeaderAgenda = (props) =>{
             case 'home':
             return(
                 <form onSubmit={props.handleSubmit}>
-                    <button >
-                        <FontAwesomeIcon icon={faSearch} />
+                    <button>
+                        <FontAwesomeIcon icon={faSearch}  />
                     </button>
                     
                     <Search placeholder='buscar...'  handleChange={props.handleChange}/>
@@ -42,7 +42,10 @@ const HeaderAgenda = (props) =>{
 return(
     <header className='encabezado' >
        <div className='encabezado-categories'>
-        <button className='back-button' onClick={props.handleBack}>
+        <button className='back-button'
+         onClick={()=>{
+            props.handleBack()
+        }}>
                 <FontAwesomeIcon icon={faChevronLeft} />
             </button>
             <h2 >VENDEDORES</h2>

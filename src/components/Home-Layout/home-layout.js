@@ -3,7 +3,7 @@ import './home-layout.css'
 
 const HomeLayout = (props) =>{
     return(
-        <div className='Home'>
+        <div className={props.className}>
             {props.children}
         </div>
     )

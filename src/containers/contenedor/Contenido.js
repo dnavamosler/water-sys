@@ -13,7 +13,7 @@ class Contenido extends Component {
         super(props)
 
         this.state = {
-            paginaActual: 'home',
+            paginaActual: this.props.page,
             paginaAnterior: null,
             admin: false
             //nota: hacer funcion recursiva para el historial.
@@ -60,6 +60,13 @@ class Contenido extends Component {
         this.setState({paginaActual: 'home'})
     }
 
+    handleShowAgenda = () => {
+        this.props.handleExitHome()
+        this.setState({ paginaAnterior: this.state.paginaActual })
+        this.setState({paginaActual: 'agenda'})
+       this.props.handleContentPage('agenda')
+        
+    }
 
 
     render(){
@@ -71,15 +78,15 @@ class Contenido extends Component {
                 return(<Login currentUser='admin' handleLogin={this.handleLogin} handleChangeUser={this.handleChangeUser}/>) //el currentUser se pasa invertido
 
                 case 'homeAdmin':
-                return(<Login currentUser='user' handleLogin={this.handleLogin} handleChangeUser={this.handleChangeUser}/>)//el currentUser se pasa invertido
+                return(<Login currentUser='user' handleLogin={this.handleLogin}  handleChangeUser={this.handleChangeUser}/>)//el currentUser se pasa invertido
 
                     //pues ese valor sera mostrado como contenido
 
                 case 'panel':
-                return(<Menu menu='usuario' handleExit={this.handleExit}/>)
+                return(<Menu menu='usuario' handleShowAgenda={this.handleShowAgenda}  handleExit={this.handleExit}/>)
 
                 case 'panelAdmin':
-                return(<Menu menu='admin' handleExit={this.handleExit}/>)
+                return(<Menu menu='admin' handleShowAgenda={this.handleShowAgenda}  handleExit={this.handleExit}/>)
 
                 case 'agenda':
                 return(<Agenda />)
