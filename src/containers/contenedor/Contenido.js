@@ -2,8 +2,6 @@ import React, { Component } from 'react'
 
 //importar hijos
 
-import MenuApi from '../../api/menu.json'
-
 import Login from '../login/containers/login'
 import Menu from '../../components/Menu/Menu'
 import Agenda from '../agenda/agenda'
@@ -11,16 +9,13 @@ import Agenda from '../agenda/agenda'
 class Contenido extends Component {
     constructor(props) {
         super(props)
-
         this.state = {
             paginaActual: this.props.page,
             paginaAnterior: null,
-            admin: false
+            admin: this.props.admin
             //nota: hacer funcion recursiva para el historial.
-
-        }
-        const usuario = 'admin'
-        window.prueba = MenuApi.Menu[usuario].options
+            
+        }        
     }
 
 
@@ -30,15 +25,11 @@ class Contenido extends Component {
         this.setState({ paginaAnterior: this.state.paginaActual })
 
         if(this.state.admin){
-            this.setState({ paginaActual: 'panelAdmin'})
-            
+            this.setState({ paginaActual: 'panelAdmin'})            
         }
         else{
-
             this.setState({ paginaActual: 'panel'})
-            
         }
-
     }
 
     handleChangeUser = () =>{
@@ -46,33 +37,55 @@ class Contenido extends Component {
         
         if(this.state.admin){
             this.setState({admin : false})
-            this.setState({ paginaActual: 'home'})
+            
+            setTimeout(() => {
+                this.props.handleUser(this.state.admin)
+                this.setState({ paginaActual: 'home'})
+            }, 1);
             
         }
         else{
             this.setState({admin : true})
-            this.setState({ paginaActual: 'homeAdmin'})
             
+           
         }
+        setTimeout(() => {
+            this.props.handleUser(this.state.admin)
+            this.setState({ paginaActual: 'homeAdmin'})
+        }, 1);
     }
 
     handleExit = () => {
+        this.setState({admin: false})
         this.setState({paginaActual: 'home'})
     }
 
     handleShowAgenda = () => {
-        this.props.handleExitHome()
-        this.setState({ paginaAnterior: this.state.paginaActual })
+        this.props.handleExitHome(this.state.paginaActual)
         this.setState({paginaActual: 'agenda'})
-       this.props.handleContentPage('agenda')
+        this.props.handleContentPage('agenda')
         
     }
 
+    handleExitAgenda = (usuario) => {
+        
+       if(usuario)
+            this.setState({paginaActual : 'panelAdmin'})
+       else
+            this.setState({paginaActual : 'panel'})
+       
+        setTimeout(() => {
+            this.props.handleBackHome(this.state.paginaActual)
+        }, 1);
+    }   
+
 
     render(){
-
-        const switchContent = (pagActual, pagAnterior) => {
-
+            
+        
+        
+        const switchContent = (pagActual) => {
+            
             switch(pagActual){
                 case 'home':
                 return(<Login currentUser='admin' handleLogin={this.handleLogin} handleChangeUser={this.handleChangeUser}/>) //el currentUser se pasa invertido
@@ -89,7 +102,7 @@ class Contenido extends Component {
                 return(<Menu menu='admin' handleShowAgenda={this.handleShowAgenda}  handleExit={this.handleExit}/>)
 
                 case 'agenda':
-                return(<Agenda />)
+                return(<Agenda handleExitAgenda={this.handleExitAgenda} admin={this.state.admin}/>)
             }
         }
 

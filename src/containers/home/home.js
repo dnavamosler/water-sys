@@ -11,6 +11,7 @@ class Home extends Component {
         this.state = {
             home: true,
             showPage : 'home',
+            admin : false
         }
     }
 
@@ -18,12 +19,19 @@ class Home extends Component {
         this.setState({showPage : pagina})
     }
 
-    handleExitHome = () => {
+    handleExitHome = (page) => {
+        this.setState({showPage : page})
         this.setState({home : false})
+        
     }
 
-    handleBackHome = () => {
-        this.setState({ home: true })
+    handleBackHome = (page) => {
+        this.setState({showPage : page})
+        this.setState({ home: true })        
+    }
+
+    handleUser = (usuario) => {
+        this.setState({admin : usuario})
     }
 
     render() {
@@ -33,7 +41,13 @@ class Home extends Component {
                 return (
                     <HomeLayout className='Home'>
                         <Logo />
-                        <Contenido handleExitHome={this.handleExitHome} page={this.state.showPage} handleContentPage={this.handleContentPage} handleBackHome={this.handleBackHome} />
+                        <Contenido 
+                            handleExitHome={this.handleExitHome} 
+                            handleUser={this.handleUser} 
+                            page={this.state.showPage} 
+                            handleContentPage={this.handleContentPage} 
+                            handleBackHome={this.handleBackHome}
+                            admin={this.state.admin}/>
                     </HomeLayout>
 
 
@@ -42,7 +56,13 @@ class Home extends Component {
             else
                 return (
                     <HomeLayout className='in'>
-                         <Contenido handleExitHome={this.handleExitHome} page={this.state.showPage} handleContentPage={this.handleContentPage}/>
+                         <Contenido 
+                            handleExitHome={this.handleExitHome} 
+                            handleUser={this.handleUser} 
+                            page={this.state.showPage} 
+                            handleBackHome={this.handleBackHome} 
+                            handleContentPage={this.handleContentPage}
+                            admin={this.state.admin}/>
                     </HomeLayout>
                 )
         }

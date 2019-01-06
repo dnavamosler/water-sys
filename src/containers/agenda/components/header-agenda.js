@@ -44,7 +44,7 @@ return(
        <div className='encabezado-categories'>
         <button className='back-button'
          onClick={()=>{
-            props.handleBack()
+            props.handleBack(props.admin)
         }}>
                 <FontAwesomeIcon icon={faChevronLeft} />
             </button>
